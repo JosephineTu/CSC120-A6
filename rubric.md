@@ -10,37 +10,37 @@ Listed below are various aspects of the assignment.  When you turn in your work,
 
 ## Assignment Points:
 
-_____ 10 pts: The class meaningfully implements each of the tests in described in the `TrainTest.java`:
+___10__ 10 pts: The class meaningfully implements each of the tests in described in the `TrainTest.java`:
 
-      _____ `testEngineConstructor()`
-      _____ `testEngineGo()`
-      _____ `testCarAddPassenger()`
-      _____ `testCarRemovePassenger()`
-      _____ `testPassengerBoardCarWithSpace()`
-      _____ `testPassengerBoardCarFull()`
-      _____ `testTrainConstructor()`
-      _____ `testTrainPassengerCount()`
-      _____ `testTrainGetCar()`
-      _____ `testTrainPrintManifest()`
+      __1___ `testEngineConstructor()`
+      __1___ `testEngineGo()`
+      __1___ `testCarAddPassenger()`
+      __1___ `testCarRemovePassenger()`
+      __1___ `testPassengerBoardCarWithSpace()`
+      __1___ `testPassengerBoardCarFull()`
+      __1___ `testTrainConstructor()`
+      __1___ `testTrainPassengerCount()`
+      __1___ `testTrainGetCar()`
+      __1___ `testTrainPrintManifest()`
 
 ## General Items:
 
-_____ 4 pts: Programs compile without errors or warnings
+__4__ 4 pts: Programs compile without errors or warnings
 
-_____ 2 pts: Executes fully & consistently without crashing (exception/freeze)
+___4__ 2 pts: Executes fully & consistently without crashing (exception/freeze)
 
-_____ 2 pt: Complies with style guidelines (missing items 1 pt each):
+___2__ 2 pt: Complies with style guidelines (missing items 1 pt each):
 
-      _____ Classes & class members all have Javadoc header comments
+      __1___ Classes & class members all have Javadoc header comments
 
-      _____ Clear and consistent indentation of bracketed sections
+      __1___ Clear and consistent indentation of bracketed sections
 
-      _____ Adheres to Java conventions on naming & capitalization
+      __1___ Adheres to Java conventions on naming & capitalization
 
-      _____ Methods & variables all have clear and accurate names
+      __1___ Methods & variables all have clear and accurate names
 
-      _____ Methods avoid confusing side effects
+      __1___ Methods avoid confusing side effects
 
-_____ 1 pt: All required files included with submission (including completed `rubric.md` file)
+___1__ 1 pt: All required files included with submission (including completed `rubric.md` file)
 
-_____ 1 pt: `reflection.md` contains your reflection on the assignment, **including a detailed description of the tests you implemented and what they do**
+__1__ 1 pt: `reflection.md` contains your reflection on the assignment, **including a detailed description of the tests you implemented and what they do**
