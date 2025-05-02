@@ -82,15 +82,15 @@ public class Train {
      * boardTrain(Passenger p)
      * @param p, Passenger object
      */
-    public void boardTrain(Passenger p){
+    public void boardTrain(Passenger p, Scanner input){
         if (this.seatsRemaining()>0){
             // create scanner object to get user input
-            Scanner input=new Scanner(System.in);
             Boolean onBoard=false;
             while(onBoard==false){
                 // get user int input
                 System.out.println("Which train do you want to board: ");
                 int i=input.nextInt();
+                input.nextLine();
                 // check if car full
                 if (this.getCar(i-1).seatsRemaining()==0 || i>this.nCars){
                     System.out.println("The current choice is unavailable.");
@@ -101,7 +101,6 @@ public class Train {
                     onBoard=true;
                 }
             }
-            input.close();
         }
         else{
             System.out.println("Car currently full.");
@@ -127,27 +126,22 @@ public class Train {
     public static void main(String[] args){
         // create new train object
         Train myTrain=new Train(FuelType.ELECTRIC,50.0,3,2);
-        Scanner inputStr1=new Scanner(System.in);
+        Scanner input=new Scanner(System.in);
         // take passenger 1
         System.out.println("What is your name: ");
-        String name1=inputStr1.nextLine();
+        String name1=input.nextLine();
         Passenger p1=new Passenger(name1);
-        inputStr1.close();
-        myTrain.boardTrain(p1);
+        myTrain.boardTrain(p1,input);
         // take passenger 2
-        Scanner inputStr2=new Scanner(System.in);
         System.out.println("What is your name: ");
-        String name2=inputStr2.nextLine();
+        String name2=input.nextLine();
         Passenger p2=new Passenger(name2);
-        inputStr2.close();
-        myTrain.boardTrain(p2);
+        myTrain.boardTrain(p2,input);
         // take passenger 3
-        Scanner inputStr3=new Scanner(System.in);
         System.out.println("What is your name: ");
-        String name3=inputStr3.nextLine();
+        String name3=input.nextLine();
         Passenger p3=new Passenger(name3);
-        inputStr3.close();
-        myTrain.boardTrain(p3);
+        myTrain.boardTrain(p3,input);
         // print the current passengers on board, test if successfully added
         myTrain.printManifest();
         // randomly travels a distance int (0,7), test engine.refuel()
@@ -155,11 +149,9 @@ public class Train {
         int stops=rand.nextInt(7);
         System.out.println(stops);
         for(int i=0;i<stops;i++){
-            if(myTrain.engine.go()==true){
-                myTrain.engine.go();
+            if (myTrain.engine.go()) {
                 System.out.println("Going...");
-            }
-            else{
+            } else {
                 System.out.println("Refueling...");
                 myTrain.engine.refuel();
                 myTrain.engine.go();
@@ -170,6 +162,7 @@ public class Train {
         // test if passenger successfully removed 
         myTrain.getoffTrain(p1);
         myTrain.printManifest();
+        input.close();
     }
 }
 
